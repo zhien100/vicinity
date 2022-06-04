@@ -17,6 +17,7 @@ pipeline:
     max_ngram: 4
   - name: DIETClassifier
     epochs: 100
+    # use_word_boundaries: True
 
 policies:
   - name: MemoizationPolicy
