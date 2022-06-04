@@ -84,6 +84,16 @@ nlu:
     - am I talking to a human?
 - intent: hospital_search
   examples: |
+    - My head is bleeding
+    - There is a knife in me
+    - hen I woke up, I was blind
+    - I have difficulty speaking
+    - There's black spot in my vision
+    - the pain in my stomach caused me to vomit
+    - i think i hallucinating
+    - I cannot balance myself suddenly
+    - i accidentally drank chemicals
+    - i got bitten by a snake
     - my legs are swollen
     - i have chest pain
     - i can't move my left hand
@@ -94,8 +104,38 @@ nlu:
     - it hurts when i urinate
     - im coughing out blood
     - i cant walk
+    - My nose is bleeding
+    - I have breathing difficulties
+    - I am having high fever 
+    - I can feel my heart beating very fast
+    - My vision is blurred
+    - My head cant stop bleeding
+    - I could not speak after waking up this morning
+    - Help! I have shortness of breath
+    - I am vomiting blood for several times today. Where should I seek for help?
+    - I have a very weak pulse.
+    - I have been bitten by an animal
+    - I feel painful when I pee
+    - i have been waking up 10 times at a night to pee
+    - I have accidentally touched poisonous chemical while my hand has open cuts
+    - my stool are in dark red colour
+    - i have bloody diarrhea
+    - I am in high fever and sever headache for 3 days
+    - I get electric shock
+    - My right leg is burning
+    - i have breath shortness
 - intent: clinic_search
   examples: |
+    - I started coughing
+    - I feel dizzy
+    - I feel hot and cold at the same time
+    - I feel nauseous the whole day
+    - i have diarrhea
+    - i hands are numb
+    - i bit my tongue and its bleeding
+    - there's bubbles in my urine
+    - my joints are hurting
+    - i sprained my ankle
     - I cut my finger
     - I went to the toiet 10 times
     - the ceiling is spinning
@@ -106,8 +146,38 @@ nlu:
     - my belly is bloated
     - i dont feel like eating anything
     - everything i ate is tasteless
+    - I am having skin rash
+    - I have experienced continuous sneezing for two days
+    - My joint is pain 
+    - I am experiencing pain behind the eyes
+    - My throat is itchy
+    - My eyes are red.
+    - I have backache
+    - I cant smell anything
+    - My tooth fell out
+    - There is an ulcer in my mouth
+    - my body temperature is 38 now
+    - i have muscle aches for few days
+    - i feel fatigue even i i have 8 hours sleep everyday
+    - i have sore throat
+    - i have runny rose
+    - i have feeling faint
+    - i keep feeling thirsty even drank 2l of water per day
+    - i pee a lot especially at night
+    - my eyes are appeared yellowish
+    - i loss 8kg without any diet and exercises
 - intent: out_of_scope
   examples: |
+    - I got divorcef
+    - I feel happy
+    - What are you?
+    - I m broke
+    - I mam your father
+    - I have feelings for my project
+    - And it's hate
+    - s this NLP?
+    - I ate an egg today
+    - Does chicken eat bawang?
     - Im rich
     - Just bought a camera
     - I love king kong
@@ -118,6 +188,26 @@ nlu:
     - my wallet is bleeding
     - have u watched dr strange?
     - i am super healthy
+    - Can I call a doctor to my house
+    - What should I eat for lunch?
+    - Do you think clinic is better or hospital is better?
+    - Is there any handsome doctor in the clinic?
+    - I would like to meet a pretty nurse in the hospital
+    - Can I meet my true love in the clinic?
+    - Do you think if she will be my girlfriend?
+    - Would you marry me?
+    - I love the smell in the hospital.
+    - Can I drive in the hospital?
+    - Do you think I am handsome?
+    - is my phone case cute?
+    - have a break, have a kitkat
+    - does onion find chicken?
+    - you are my forever love
+    - i will always stay by your side
+    - i just wanna lay in my bed
+    - i don't feel like doing anything
+    - do you know to dance?
+    - do you know to rap?
 - intent: provide_address
   examples: |
     - I am currently at [26, Jalan SS 2/77, SS 2, 47300 Petaling Jaya, Selangor](address)
