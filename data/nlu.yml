@@ -82,3 +82,59 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+- intent: hospital_search
+  examples: |
+    - my legs are swollen
+    - i have chest pain
+    - i can't move my left hand
+    - my urine is red in colour
+    - my stomach is swelling
+    - my face is yellow
+    - theres blood in my stool
+    - it hurts when i urinate
+    - im coughing out blood
+    - i cant walk
+- intent: clinic_search
+  examples: |
+    - I cut my finger
+    - I went to the toiet 10 times
+    - the ceiling is spinning
+    - my hand is itchy
+    - i think i have a cold
+    - im cold
+    - my head is aching
+    - my belly is bloated
+    - i dont feel like eating anything
+    - everything i ate is tasteless
+- intent: out_of_scope
+  examples: |
+    - Im rich
+    - Just bought a camera
+    - I love king kong
+    - I am hungry
+    - nasi lemak sedap
+    - I cut my hair short
+    - i need money
+    - my wallet is bleeding
+    - have u watched dr strange?
+    - i am super healthy
+- intent: provide_address
+  examples: |
+    - I am currently at [26, Jalan SS 2/77, SS 2, 47300 Petaling Jaya, Selangor](address)
+    - My current location is [26, Jalan SS 2/77, SS 2, 47300 Petaling Jaya, Selangor](address)
+    - This is my location [26, Jalan SS 2/77, SS 2, 47300 Petaling Jaya, Selangor](address)
+    - This is my location, [26, Jalan SS 2/77, SS 2, 47300 Petaling Jaya, Selangor](address)
+    - [26, Jalan SS 2/77, SS 2, 47300 Petaling Jaya, Selangor](address)
+    - I am now near to [26, Jalan SS 2/77, SS 2, 47300 Petaling Jaya, Selangor](address)
+    - [26, Jalan SS 2/77, SS 2, 47300 Petaling Jaya, Selangor](address) is just near to me
+    - [26, Jalan SS 2/77, SS 2, 47300 Petaling Jaya, Selangor](address), here am I 
+    - Address [26, Jalan SS 2/77, SS 2, 47300 Petaling Jaya, Selangor](address)
+    - Here, [26, Jalan SS 2/77, SS 2, 47300 Petaling Jaya, Selangor](address)
+    - My address is [26, Jalan SS 2/77, SS 2, 47300 Petaling Jaya, Selangor](address)
+    - Here am I, [26, Jalan SS 2/77, SS 2, 47300 Petaling Jaya, Selangor](address)
+    - Please find me here, [26, Jalan SS 2/77, SS 2, 47300 Petaling Jaya, Selangor](address)
+    - Sure, this is my location [26, Jalan SS 2/77, SS 2, 47300 Petaling Jaya, Selangor](address)
+    - My house located at [26, Jalan SS 2/77, SS 2, 47300 Petaling Jaya, Selangor](address)
+    - Here is my house [26, Jalan SS 2/77, SS 2, 47300 Petaling Jaya, Selangor](address)
+    - Yea sure, I am now at [26, Jalan SS 2/77, SS 2, 47300 Petaling Jaya, Selangor](address)
+    - I am located in [26, Jalan SS 2/77, SS 2, 47300 Petaling Jaya, Selangor](address)

@@ -15,9 +15,9 @@ stories:
   - action: utter_greet
   - intent: mood_unhappy
   - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  #- action: utter_did_that_help
+  #- intent: affirm
+  # action: utter_happy
 
 - story: sad path 2
   steps:
@@ -25,10 +25,61 @@ stories:
   - action: utter_greet
   - intent: mood_unhappy
   - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  #- action: utter_did_that_help
+  #- intent: deny
+  #- action: utter_goodbye
 
 - story: interactive_story_1
   steps:
   - intent: greet
+  - action: utter_greet
+
+- story: finding_hospital_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: hospital_search
+  - action: utter_hospital_search
+  - action: utter_ask_for_address
+  - intent: provide_address
+    entities:
+    - address
+  - action: utter_acknowledge_provided_address
+  - intent: affirm
+  - action: utter_thanks
+
+- story: finding_hospital_2 detect wrong address
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: hospital_search
+  - action: utter_hospital_search
+  - action: utter_ask_for_address
+  - intent: provide_address
+    entities:
+    - address
+  - action: utter_acknowledge_provided_address
+  - intent: deny
+  - action: utter_ask_for_address
+  - intent: provide_address
+    entities:
+    - address
+  - action: utter_acknowledge_provided_address
+  - intent: affirm
+  - action: utter_thanks
+
+- story: finding_clinic_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: clinic_search
+  - action: utter_clinic_search
+  - action: utter_ask_for_address
+  - intent: provide_address
+    entities:
+    - address
+  - action: utter_acknowledge_provided_address
+  - intent: affirm
+  - action: utter_thanks
+
+
