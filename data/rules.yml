@@ -2,6 +2,11 @@ version: "3.1"
 
 rules:
 
+- rule: Greet user anytime the user greets
+  steps:
+  - intent: greet
+  - action: utter_greet
+
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
@@ -11,3 +16,40 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Ask for location after user inputted severe symptoms
+  steps:
+  - intent: hospital_search
+  - action: utter_hospital_search
+  - action: utter_ask_for_address
+
+- rule: Ask for location after user inputted mild symptoms
+  steps:
+  - intent: clinic_search
+  - action:  utter_clinic_search
+  - action: utter_ask_for_address
+
+- rule: Confirm the provided address
+  steps:
+  - intent: provide_address
+    entities:
+    - address
+  - action: utter_acknowledge_provided_address
+
+- rule: Ask again if wrong address is inputted
+  steps:
+  - intent: deny
+  - action: utter_ask_for_address
+
+- rule: Thank the user after user confirmed the email
+  steps:
+  - intent: affirm
+  - action: utter_thanks  
+  
+
+- rule: Return string if no proper response is received
+  steps:
+  - intent: out_of_scope
+  - action: utter_error
+
+
