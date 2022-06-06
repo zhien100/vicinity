@@ -137,6 +137,9 @@ nlu:
 - intent: clinic_search
   examples: |
     - I started coughing
+    - Flu 
+    - Cough
+    - My leg is pain
     - I feel dizzy
     - I feel hot and cold at the same time
     - I feel nauseous the whole day
