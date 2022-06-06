@@ -124,6 +124,16 @@ nlu:
     - I get electric shock
     - My right leg is burning
     - i have breath shortness
+    - bleeding profusely
+    - I've been poisoned
+    - Bone protrusion
+    - Bones snapped
+    - Bloody stool
+    - It hurts to breathe
+    - Severed tendon
+    - Broken bones
+    - Difficulty breathing
+    - Intense, frequent migraines
 - intent: clinic_search
   examples: |
     - I started coughing
@@ -166,6 +176,18 @@ nlu:
     - i pee a lot especially at night
     - my eyes are appeared yellowish
     - i loss 8kg without any diet and exercises
+    - throat is sore
+    - soar throat
+    - knees hurt
+    - stomach swelling
+    - Feeling unwell, lethargic body
+    - Tight sensation around chest
+    - Back pain
+    - General discomfort
+    - minor coughing
+    - Stepped on glass
+    - i have fever
+    - I have mild fvr
 - intent: out_of_scope
   examples: |
     - I got divorcef
@@ -235,3 +257,30 @@ nlu:
     - Bring me from [Lanson Place Bukit Ceylon, Bukit Bintang](address)
     - I now at [one utama](address)
     - Locate me from [mid valley](address)
+
+- intent: thanks
+  examples: |
+    - thanks
+    - thanks for the help
+    - thank you
+    - okay, thank 
+    - that's all for now, thanks
+    - Nothing else
+    - You are so helpful
+    - You make this easy
+    - I am so grateful
+    - I'm done
+    - Thanks for the assistance
+    - Alright, have a nice day
+    - Okay, cool
+    - I appreciate it
+    - ok, i'll go there
+    - wish me luck
+    - Aight, imma head out
+    - great
+    - tq
+    - thx
+    - thank you so much
+    - 3q
+    - Cheers mate
+    - much obliged

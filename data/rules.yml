@@ -41,11 +41,16 @@ rules:
   - intent: deny
   - action: utter_ask_for_address
 
-- rule: Thank the user after user confirmed the email
+- rule: Reply welcome to the user after user said thanks
   steps:
-  - intent: affirm
-  - action: utter_thanks  
-  
+  - intent: thanks
+  - action: utter_welcome
+
+# - rule: Generate 5 nearest hospitals after user confirmed the address
+#   steps:
+#   - intent: affirm
+#   - action: action_fetch_hospitals
+#   - action: action_calculate_hospital_distance
 
 - rule: Return string if no proper response is received
   steps:
