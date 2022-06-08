@@ -1,12 +1,15 @@
 
+from random import random
 from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.events import SlotSet
 
 import csv
 import os
 import requests
+import random
 from dotenv import load_dotenv, find_dotenv
 from geopy import distance
 
@@ -26,6 +29,32 @@ clinic_list = []
 #         dispatcher.utter_message(text="Hello World!")
         
 #         return []
+
+class ActionSetSearchHospital(Action):
+    def name(self) -> Text:
+        return "action_set_search_hospital"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        #  hospital = True
+        return[
+            SlotSet("set_clinic", False),
+            SlotSet("set_hospital",True)
+        ]
+
+class ActionSetSearchClinic(Action):
+    def name(self) -> Text:
+        return "action_set_search_clinic"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        # hospital = False
+        return[
+            SlotSet("set_hospital",False),
+            SlotSet("set_clinic", True)
+        ]
 
 class ActionFetchHospitals(Action):
     def name(self) -> Text:

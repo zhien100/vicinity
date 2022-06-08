@@ -1,0 +1,7 @@
+{
+  "rule_only_slots": [
+    "hospital",
+    "address"
+  ],
+  "rule_only_loops": []
+}

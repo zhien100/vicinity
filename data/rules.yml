@@ -21,12 +21,14 @@ rules:
   steps:
   - intent: hospital_search
   - action: utter_hospital_search
+  - action: action_set_search_hospital #set hospital=true
   - action: utter_ask_for_address
 
 - rule: Ask for location after user inputted mild symptoms
   steps:
   - intent: clinic_search
-  - action:  utter_clinic_search
+  - action: utter_clinic_search
+  - action: action_set_search_clinic #set hospital = false (is clinic)
   - action: utter_ask_for_address
 
 - rule: Confirm the provided address
@@ -51,6 +53,22 @@ rules:
 #   - intent: affirm
 #   - action: action_fetch_hospitals
 #   - action: action_calculate_hospital_distance
+
+- rule: Generate 5 nearest hospitals after user confirmed the address
+  steps:
+  - intent: affirm
+  - slot_was_set:
+    - set_hospital: true
+  - action: action_fetch_hospitals
+  - action: action_calculate_hospital_distance
+
+- rule: Generate 5 nearest clinics after user confirmed the address
+  steps:
+  - intent: affirm
+  - slot_was_set:
+    - set_clinic: true
+  - action: action_fetch_clinics
+  - action: action_calculate_clinic_distance
 
 - rule: Return string if no proper response is received
   steps:

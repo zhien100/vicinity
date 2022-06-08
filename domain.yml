@@ -50,6 +50,8 @@ actions:
 - action_fetch_clinics
 - action_calculate_hospital_distance
 - action_calculate_clinic_distance
+- action_set_search_hospital
+- action_set_search_clinic
 
 entities:
 - address
@@ -60,4 +62,18 @@ slots:
     mappings:
     - type: from_entity
       entity: address
+  
+  set_hospital:
+    type: bool
+    influence_conversation: true
+    mappings: 
+    - type: custom
+      action: action_set_search_hospital
+
+  set_clinic:
+    type: bool
+    influence_conversation: true
+    mappings: 
+    - type: custom
+      action: action_set_search_clinic
 
