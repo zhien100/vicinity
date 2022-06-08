@@ -48,12 +48,6 @@ rules:
   - intent: thanks
   - action: utter_welcome
 
-# - rule: Generate 5 nearest hospitals after user confirmed the address
-#   steps:
-#   - intent: affirm
-#   - action: action_fetch_hospitals
-#   - action: action_calculate_hospital_distance
-
 - rule: Generate 5 nearest hospitals after user confirmed the address
   steps:
   - intent: affirm

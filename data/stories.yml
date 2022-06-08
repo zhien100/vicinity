@@ -28,22 +28,25 @@ stories:
   - intent: greet
   - action: utter_greet
 
-# - story: finding_hospital_1
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: hospital_search
-#   - action: utter_hospital_search
-#   - action: utter_ask_for_address
-#   - intent: provide_address
-#     entities:
-#     - address
-#   - action: utter_acknowledge_provided_address
-#   - intent: affirm
-#   - action: action_fetch_hospitals
-#   - action: action_calculate_hospital_distance
-#   - intent: thanks
-#   - action: utter_welcome
+- story: finding_hospital
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: hospital_search
+  - action: utter_hospital_search
+  - action: action_set_search_hospital #set hospital = true
+  - action: utter_ask_for_address
+  - intent: provide_address
+    entities:
+    - address
+  - action: utter_acknowledge_provided_address
+  - intent: affirm
+  - slot_was_set:
+    - set_hospital: true
+  - action: action_fetch_hospitals
+  - action: action_calculate_hospital_distance
+  - intent: thanks
+  - action: utter_welcome
 
 # - story: finding_hospital_2 detect wrong address
 #   steps:
@@ -68,22 +71,25 @@ stories:
 #   - intent: thanks
 #   - action: utter_welcome
 
-# - story: finding_clinic_1
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: clinic_search
-#   - action: utter_clinic_search
-#   - action: utter_ask_for_address
-#   - intent: provide_address
-#     entities:
-#     - address
-#   - action: utter_acknowledge_provided_address
-#   - intent: affirm
-#   - action: action_fetch_clinics
-#   - action: action_calculate_clinic_distance
-#   - intent: thanks
-#   - action: utter_welcome
+- story: finding_clinic
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: clinic_search
+  - action: utter_clinic_search
+  - action: action_set_search_clinic #set clinic = true
+  - action: utter_ask_for_address
+  - intent: provide_address
+    entities:
+    - address
+  - action: utter_acknowledge_provided_address
+  - intent: affirm
+  - slot_was_set:
+    - set_clinic: true
+  - action: action_fetch_clinics
+  - action: action_calculate_clinic_distance
+  - intent: thanks
+  - action: utter_welcome
 
 # - story: finding_clinic_2 detect wrong address
 #   steps:
@@ -141,28 +147,34 @@ stories:
 #   - intent: thanks
 #   - action: utter_welcome
 
-# - story: finding_hospital_clinic_2
+# - story: finding_hospital_clinic
 #   steps:
 #   - intent: greet
 #   - action: utter_greet
 #   - intent: hospital_search
 #   - action: utter_hospital_search
+#   - action: action_set_search_hospital #set hospital = true
 #   - action: utter_ask_for_address
 #   - intent: provide_address
 #     entities:
 #     - address
 #   - action: utter_acknowledge_provided_address
 #   - intent: affirm
+#   - slot_was_set:
+#     - set_hospital: true
 #   - action: action_fetch_hospitals
 #   - action: action_calculate_hospital_distance
 #   - intent: clinic_search
 #   - action: utter_clinic_search
+#   - action: action_set_search_clinic #set clinic = true
 #   - action: utter_ask_for_address
 #   - intent: provide_address
 #     entities:
 #     - address
 #   - action: utter_acknowledge_provided_address
-#   - intent: affirm
+#   - intent: affirm  
+#   - slot_was_set:
+#     - set_clinic: true
 #   - action: action_fetch_clinics
 #   - action: action_calculate_clinic_distance
 #   - intent: thanks
